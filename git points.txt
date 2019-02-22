@@ -1,0 +1,139 @@
+=====================================================================================
+==================Git/Github Important Points/Details================================
+=====================================================================================
+=========================BY "IBAD SHAIKH"============================================
+
+1)Bhai dekho central repository hoti ha "GITHUB" per.
+
+2)Aur local repository hoti ha "LOCAL DISK or LOCAL MACHINE".
+
+3)Hum sab se pehle GITHUB pe NEW REPOSITORY create karte hain.
+
+4)Phr usska jo HTTP-Address ata ha usko copy karte hain aur
+  LOCAL MACHINE -> LOCAL FOLDER -> GIT BASH HERE -> git remote
+  add origin"http address".
+
+5)Hamari 1 README ki file exist karti ha har new repository ke saath GITHUB
+  per.
+
+6)Aur ager humay wo file FETCH karni ha from CENTRAL REPOSITORY/GITHUB to our
+  LOCAL REPOSITORY/LOCAL MACHINE...to uske liye following command:
+  "git pull origin master"
+
+7)Confirm karne ke liye hum waapis apne local repository ma jaaker check karengy 
+  ke ager README ki file uss folder ma agai to samajhlo FETCHING successful.
+  This is the process how you update your LOCAL REPOSITORY from your CENTRAL 
+  REPOSITORY.
+
+8)Bhai dekho hamare paas initial 3 layers hoti hain WORKSPACE,INDEX & LOCAL SPACE or
+  LOCAL REPOSITORY.
+
+9)Suppose ager hum LOCAL FOLDER mai 1 my.txt file bante hain aur usma kuch bhi likh kar
+  save karte hain to wo save hojaegi hamare WORKSPACE ma.
+  WORKSPACE: ye samajhlo aapke folder ka area ha jis ma sab kuch hota ha i mean saari
+  files iss ma hoti hain. WORKSPACE ko pehli layer kehte hain..
+
+10)Doosri layer hoti ha INDEX.INDEX ma kuch bhi daalne ke liye hum files ko WORKSPACE 
+   se INDEX ma move karate hain..
+
+11)Ab ager aap GIT ma jaaker command likhoge "git stauts" ,to phr window per aega
+   untracked files -> my.txt
+
+12)UNTRACKED FILES wo files hoti ha jo hamare INDEX(2nd Layer) ma save nhe hui vi hoti.
+   Isiliye system inhe untracked files kehta ha..Ye untracked files sirf WORKSPACE ma
+   hoti ha..
+
+13)Ager humay my.txt ma koi changes karne hain to pehle hum issay INDEX ma move karengy 
+   phr jaaker isme changes COMMIT karengy..
+
+14)WORKSPACE se INDEX ma move karne ke liye hum command likhengy "git add my.txt"
+   phr hum likhengy "git status" to phr likhawa aega 
+   "new file : 
+
+15)It means ke hamari my.txt file INDEX ma aachuki ha.Ab hum iss file ma changes 
+   COMMIT karsakte hain apni LOCAL REPOSITORY 
+
+16)For example ager hum bohot saari .txt files create karte hain aur humay unn sab 
+   ko aik saath INDEX ma move karna ha to hum hum command likhengy "git add -A"
+
+17)Aur ager humay saari files ma changes COMMIT karne hain aik saath to hum likhengy
+   "git commit -a -m "Any changes you want to display related to your commits" ".
+
+18)It means ADD karne ke liye "-A" aur COMMIT ke liye "-a"   
+
+19)Aur ager humay apne COMMIT ka saara record/history dekhi ha to hum likhengy
+   "git log"..ye humay bataega COMMIT ki saari details means ke hum ne kia 
+   commit kara kia add kara aur kis time. 
+  
+========BRANCHES========
+
+20)BRANCHES copies kehlaati hain...Branches ka purpose ye hota ha ke Hum apni
+   MASTER BRANCH (sab se bari branch) ki copies banalete hain taake hum iss se derived 
+   branch ma editing karlen aur hamari master branch ma koi changes na aen wo 
+   original hee rahe.
+
+21)Branches bhi 2 types ki hoti ha:
+   LOCAL & REMOTE TRACKING : local wali just local hoti ha jo workspace ma rehti hain
+   aur remote tracking wo hoti ha jo hamari branches ko local se central per 
+   connect karti hain...
+
+22)Sab se pehle initial stage per hum apni MASTER BRANCH ma hote hain.aur ager humay 
+   koi doosri branch banani for example : "firstbranch", MASTER branch ki to hum 
+   likhengy "git branch firstbranch"...to phr ye aik branch create hojaegi jis ma
+   MASTER ki saari cheezen hongi...samajhlo ye aik copy bna gai MASTER ki.
+
+23)Phr ata ha SWITCHING from any branch to any branch..ye karne ke liye humay jis
+   branch ma jana hot ha usko ko iss tarah likhte hain "git checkout firstbranch".
+   Note:Branch name hum kuch bhi rakh sakte hain.
+
+24)Ab hum apni second branch (first branch) ma 1 new file create karengy my1.txt
+   phr ise add karengy index ma phr iss ma kuch changes kerne ke baad 
+   isko commit karengy aur phr hum check karengy ke hamari firstbranch ma ye add hua
+   ya nhe.
+
+25)Then cmd ma likhengy "ls" phr ye command humay saari files ke name display 
+   kardegi uss particular branch ke..
+
+=======MERGING========
+
+26)MERGING means ke hum aik branch ki files kisi doosri branch ma daalte hain.
+
+27)For example ager humay apni first branch ki file my1.txt ko masterbranch ma 
+   merge karna ha to iska matlab masterbranch hamari DESTINATION BRANCH ha.
+   Aur jab bhi hum kisi branch ki file ko doosri branch(DESTINATION branch) ma 
+   merge karte hain to humay cmd ma Destinationbranch ma hona hota ha uske liye 
+   huum pehle likhte hain "git checkout masterbranch"..iss command se hum us
+   branch ma aajate hain..
+
+28)Ab hum merge karengy firstbranch ko masterbranch se to pehle to hum apni current
+   branch ma hongy which is destination branch..
+   Then hum type karengy "git merge firstbranch"..iska matlab humay firstbranch
+   ko merge karna ha  masterbranch se..
+
+29)Aur notice that ke pehle master branch ma hamare pass my1.txt nhe thi lekn ab hum 
+   cmd per likhengy "1s" to wo master ke saare components dikhaega uss ma README my.txt
+   aur my1.txt bhi hogi...It means MERGING successful!.
+
+30)Imp Point: Ager hum ab dobara firstbranch ma koi changes karengy to uska effect 
+   masterbranch per nhe aega jab tak ham phr se usko masterbranch ke saath merge 
+   nhe karengy.
+
+Note: Diff between pull and fetch...jab hum pull karte hain to ye pull karta ha
+      central to local in and merges in branches.While in fetch hum fetch karte hain
+      from central to local in a separate branch aur merge nhe hota ye.
+      So it means:
+          -GIT PULL = GIT FETCH + GIT MERGE.
+          -GIT FETCH =  GIT FETCH - GIT MERGE(creates another branch with merging). 
+
+
+31)Cloning through SSH ...When we've to push 
+
+32)According to version control system we can check our prevoius version of the updated 
+   file by using its hexadecimal code..
+
+======================CREATED BY 'IBAD SHAIKH"==========================
+============================THANKS ALL==================================
+=======================For queries,message me=========================== 
+
+
+
